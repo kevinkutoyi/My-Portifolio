@@ -6,9 +6,6 @@
 }
 body {
   background-image: linear-gradient(blue, navy);
-  /* background-color: #2F2FA2; */
-  /* background-color: #0c0cec; */
-  /* background-color: blue; */
 }
 .card a{
   color: gray;
@@ -35,7 +32,7 @@ body {
   z-index: 2000;
 }
 .disappear{
-  animation: vanish 10s forwards;
+  animation: vanish 2s forwards;
 }
 @keyframes vanish{
   100%{
@@ -47,46 +44,37 @@ body {
   font-size: 22px;
 }
 .service-card{
-  /* width: 25%;
-  height: 100%; */
+  background-color: navy;
   border: 1px solid #FFD700;
   border-radius: 3px;
   position: relative;
   height: 198px;
   width: 280px;
   margin: 3px;
-  /* border: 2px solid red; */
+  opacity: 0.5;
 }
-/* .service-card {
- 
-} */
 .service-card:hover {
-  /* display: flex; */
   flex-grow: 0.03;
   transition: .3s;
   box-shadow: 0 5px 6px 0 rgba(238, 235, 235, 0.7);
+  opacity: 0.8;
 }
 #source-code{
   margin-bottom: 15px;
-  /* background-color: brown; */
 }
-/* #site{
-  background-color: brown; 
-} */
 .link-row{
   display: flex;
   gap: 4px;
-  /* flex-direction: column; */
 }
 .source-code{
   padding: 6px;
-  background-color: red;
+  background-color: navy;
   border-radius: 7px;
   margin-bottom: 3px;
 }
 .live-site{
   padding: 6px;
-  background-color: red;
+  background-color: navy;
   border-radius: 7px;
   /* margin-top: 5px; */
 }
@@ -123,16 +111,6 @@ body {
   /* text-transform: uppercase; */
   transition: .3s;
 }
-/* .nav_link::before{
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 100%;
-  width: 50%;
-  height: 2px;
-  background: red;
-  transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
-} */
 .nav_link::after{
   content: '';
   position: absolute;
@@ -166,13 +144,10 @@ body {
 #navbar ul li a {
   text-decoration: none;
   color: #fff;
-
-
-  /* font-weight: bold; */
 }
-ul li a:active {
+/* ul li a:active {
   color: red;
-}
+} */
 #navbar ul li a:hover {
   color: #FFD700;
   transition: 0.3s;
@@ -251,7 +226,7 @@ ul li a:active {
   margin-top: 5px;
 }
 #icon{
-  margin-left: 10em;
+  margin-left: 1.6em;
 }
 i{
  color: #FFD700;
@@ -264,11 +239,13 @@ i{
   transition: 3s;
 }  
 #paragraph2 {
+  padding-top: 25px;
   text-align: center;
   letter-spacing: 3px;
   padding-left: 4%;
   font-size: 22px;
   width: 90%;
+  padding-bottom: 100px;
 }
 
 #paragraph5{
@@ -514,15 +491,27 @@ textarea {
 ::placeholder {
   font-size: 1.2em;
 }
-.submit-btn{
+.submit-btn, .submit{
+  color: #f5f5f5;
   padding: 0.4em;
   width: 100%;
-  background-color: red;
+  background-color: goldenrod;
   font-size: 1.3em;
   font-weight: bolder;
   border-radius: 5px;
-  border: 1px solid red;
+  border: 1px solid #FFD700 ;
 }
+.submit-btn:hover{
+  color: blue;
+  background-color: rgb(233, 217, 177);
+  transition: 2s;
+}
+.submit:hover {
+  color: blue;
+  background-color: rgb(233, 217, 177);
+  transition: 2s;
+}
+
 .pro{
   margin-bottom: 10px;
 }
@@ -532,12 +521,12 @@ textarea {
 #followers-btn{
   display: none;
 }
-#project-card{
+/* #project-card{
   width: 25%;
   height: 30%;
   border: 1px solid red;
   position: relative;
-}
+} */
 #paragraph-project {
   text-align: center;
   letter-spacing: 3px;
@@ -547,22 +536,18 @@ textarea {
   margin-top: -300px;
 }
 #footing{
-  margin-top: 50px;
-  color: #ff4242;
-  padding-top: 15px;
-  /* padding-bottom: 5px; */
+  padding-top: 50px;
+  padding-bottom: 0;
+  margin-bottom: 50px;
   border-top: 1px solid #fff;
-  margin-bottom: 1px;
 }
 footer {
   clear: right;
   color: #fff;
-  /* padding: 4%; */
   justify-content: center;
   margin-top: 50px;
   padding-top: 15px;
   padding-bottom: 5px;
-  /* margin-bottom: 20px; */
   border-top: 1px solid #fff;
 }
 .card {
@@ -636,8 +621,6 @@ footer {
 }
 .submit {
   display: block;
-  color: white;
-  background-color: #000;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -647,13 +630,8 @@ footer {
   font-size: 1rem;
   margin-top: 150px;
   margin-left: -320px;
-  transition: all .2s ease-in-out;
+  width: 100px;
 }
-
-.submit:hover {
-  background-color: rgb(39, 36, 36);
-}
-
 .arrows {
   font-size: 1.8rem;
   cursor: pointer;
@@ -726,13 +704,14 @@ footer {
   display: flex;
 }
 .errorcontainer {
-  width: 85%;
+  width: 75%;
+  margin-left: 12%;
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
   position: absolute;
-  background-color: #ff4242;
-  color: white;
+  background-color: #FFD700;
+  color: blue;
   padding: 10px 75px;
   text-align: center;
   display: flex;
