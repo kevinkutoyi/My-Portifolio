@@ -10,6 +10,14 @@
     <link rel="stylesheet" href="CSS/all.min.css">
     <link rel="stylesheet" href="CSS/fontawesome.min.css">
     <script src="https://kit.fontawesome.com/457430ebc3.js" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("eNl7P-EkJ8YY2xn5s");
+   })();
+</script>
 </head>
 <body>
     <div class="loader">
@@ -73,15 +81,18 @@
 
 
             </div>
-            <div id="my-form">
-                <form action="mailto:kevinkutoyi95@gmail.com"
+            <!-- action="mailto:kevinkutoyi95@gmail.com"
                 method="POST"
                 enctype="text/plain"
-                name="EmailForm">
-                <input type="text" size="19" name="Name" placeholder="Enter Your Name" required><br><br>
-                <input type="email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$" size="19" name="email" placeholder="Enter Your Email Address" required><br><br>
-                <textarea rows="4" cols="50" name="Message" placeholder="Write your message here..." required></textarea><br>
-                <button type="submit" id="submit-btn" class="submit-btn" value="Submit">SEND</button> 
+                name="EmailForm" -->
+                <!-- pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$" -->
+            <div id="my-form">
+                <form onsubmit="sendMail(); reset(); return false">
+                <p style="color: red" id="error"></p>
+                <input type="text" size="19" id="name" name="Name" placeholder="Enter Your Name"/><br><br>
+                <input type="email" id="email" size="19" name="email" placeholder="Enter Your Email Address"/><br><br>
+                <textarea id="message" rows="4" cols="50" name="Message" placeholder="Write your message here..." required></textarea><br>
+                <button type="submit" id="submit-btn" class="submit-btn" onclick="sendail()">SEND</button> 
                 </form>        
             </div>
             <p id="paragraph5" style="color: #fff;">If you are looking to create a modern responsive website 

@@ -427,6 +427,7 @@ textarea {
    min-width: 80%;  
   }
   #paragraph7{
+   padding-bottom: 45px;
    padding-left: 2%;
    min-width: 80%;
    display: flex;
@@ -831,5 +832,6 @@ color: #FFD700;
   0% {
     transform: translateX(0); }
   100% {
-    transform: translateX(300px); } }
+    transform: translateX(300px); } 
+  }
 
