@@ -598,12 +598,13 @@ footer {
   width: 100%;
 }
 .reviewinp {
-  width: 300px;
+  width: 85%;
   height: 70px;
   outline: none;
   border-radius: 5px;
   border: none;
   background-color: #f5f5f5; 
+  /* background-color: red;  */
   resize: none;
   padding: 10px 5px 10px 10px;
   font-family: 'Sulphur Point', sans-serif;
